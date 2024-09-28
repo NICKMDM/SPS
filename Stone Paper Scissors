@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+      int count = 0;
+    do{
+        srand(time(0));
+    int User, computer = rand() % 3;
+    /*
+        0 --> Stone
+        1 --> Scissors
+        2 --> Paper
+    */
+    
+    printf("Choose 0 for Stone, 1 for Scissors and 2 for Paper \n");
+    scanf("%d",&User);
+    printf("Computer chose %d\n", computer);
+
+    
+    if (User == 0 && computer == 0)
+    {
+        printf("Its a Draw!\n");
+    }
+    else if (User == 0 && computer == 1)
+    {
+        printf("You Win!\n");
+        count++;
+    }
+    else if (User == 0 && computer == 2)
+    {
+        printf("You Lose!\n");
+    }
+    else if (User == 1 && computer == 0)
+    {
+        printf("You Lose!\n");
+    }
+    else if (User == 1 && computer == 1)
+    {
+        printf("Its a Draw!\n");
+    }
+    else if (User == 1 && computer == 2)
+    {
+        printf("You win!\n");
+        count++;
+    }
+    else if (User == 2 && computer == 0)
+    {
+        printf("You win!\n");
+        count++;
+    }
+    else if (User == 2 && computer == 1)
+    {
+        printf("You Lose!\n");
+    }
+    else if (User == 2 && computer == 2)
+    {
+        printf("Its a Draw!\n");
+    }
+    else{
+        printf("Something went wrong!");
+    }
+    } while(count!=10);
+    
+    printf("Congratulations! You won 10 Times");
+
+    return 0;
+}
